@@ -1,0 +1,616 @@
+nohup: ignoring input
+2017/08/28 01:41:39 INFO: 连接服务器180.76.189.148:8210成功
+2017/08/28 01:41:39 INFO: 开始搜索0 - 440003000033668
+2017/08/28 01:41:39 INFO: 开始搜索0 - 440003000044711
+2017/08/28 01:41:39 INFO: 开始搜索0 - 440003000041789
+2017/08/28 01:42:00 WARN: 搜索440003000033668:0失败 - Post http://gd.gsxt.gov.cn/aiccips/CheckEntContext/showCheck.html: EOF
+2017/08/28 01:42:02 INFO: 开始搜索0 - 440003000044746
+content>>>> ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EDGE" />
+    <title>国家企业信用信息公示系统</title>
+    <script type="text/javascript" src="http://gd.gsxt.gov.cn/aiccips/easyui/jquery-1.7.2.min.js"></script>
+    <link href="http://gd.gsxt.gov.cn/aiccips/css/public.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://gd.gsxt.gov.cn/aiccips/js/loading/loading.s.js"></script>
+    <script type="text/javascript" src="http://gd.gsxt.gov.cn/aiccips/js/checkResultList.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://gd.gsxt.gov.cn/aiccips//css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="http://gd.gsxt.gov.cn/aiccips//css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="http://gd.gsxt.gov.cn/aiccips//css/validate.css"/>
+    <link rel="stylesheet" type="text/css" href="http://gd.gsxt.gov.cn/aiccips//css/checkResultList.css"/>
+    <script type="text/javascript" src="http://gd.gsxt.gov.cn/aiccips//js/jquerypagination/jquery.pagination.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://gd.gsxt.gov.cn/aiccips//js/jquerypagination/pagination.css">
+    <link rel="stylesheet" type="text/css" href="http://gd.gsxt.gov.cn/aiccips//css/changPagin.css" />
+    <link rel="stylesheet" href="http://gd.gsxt.gov.cn/aiccips//js/ui/skin/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="http://gd.gsxt.gov.cn/aiccips//js/ui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://gd.gsxt.gov.cn/aiccips//css/uidialog.css">
+
+    <script type="text/javascript">
+        var noSel = new Array("广东", "广州", "深圳", "内蒙古", "吉林", "长春", "辽宁", "海南", "广东省", "吉林省", "长春市", "辽宁省", "海南省", "广州市", "深圳市", "公司", "企业", "有限公司", "有限责任公司");
+        function goIndex(id) {
+            if (id == "ds") {
+                window.location.href = "http://gd.gsxt.gov.cn/aiccips/";
+            } else if (id == "gs") {
+                window.location.href = "http://gsxt.saic.gov.cn/";
+            }
+        }
+        function pageselectCallback(page_index, jq) {
+            var url = "http://gd.gsxt.gov.cn/aiccips/CheckEntContext/showCheck.html";
+            $("#pageNo").val(page_index + 1)
+            $("#mycheckForm").serialize();
+            $('#mycheckForm').attr('action', url);
+            $("#mycheckForm").submit();
+        }
+        $(document).ready(function () {
+            $("#myPagination").pagination(1, {
+                callback: pageselectCallback,
+                next_text: '下一页',
+                num_display_entries: 10,
+                num_edge_entries: 1,
+                prev_text: '上一页',
+                items_per_page: 10,
+                current_page: (1-1)
+            });
+        });
+        function details(obj){
+           var href =  $(obj).find("div:first").find("a:first").attr("href")
+            window.open(href);
+        }
+
+    </script>
+    <style type="text/css">
+        .hl{
+           color: red;
+        }
+        .rsfont{
+            font-family: '微软雅黑 Bold', '微软雅黑';
+            color: #333333;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="bodyStyle">
+<script>
+    $(document).ready(function () {
+        $("body").click(function(){
+            $("#dfdh").css("display","none")
+
+        })
+        $("#dh").click(function(e){
+            e.stopPropagation()
+            $("#dfdh").css("display","inline-block");
+
+        })
+    })
+
+    function goAnnual() {
+
+        if ("gd"=="gd")
+        {
+            //window.location.href = "http://gsxt.gdgs.gov.cn/aiceps";
+           //window.location.href = "http://10.1.1.157:5888/aiceps";
+            window.open("/aiceps");
+
+        }
+        if ("gd"=="hn")
+        {
+            window.location.href = "http://aic.hainan.gov.cn:5888/aiceps";
+        }
+        if ("gd"=="nm")
+        {
+           // window.location.href = "http://www.nmgs.gov.cn:90/aiceps";
+            // window.location.href = "http://www.nmgs.gov.cn:90/aiceps";
+
+            //window.location.href = "http://116.112.10.219:28002/aiceps";
+            //window.location.href = "http://116.112.10.222/aiceps/";
+            window.open("/aiceps");
+        }
+        if ("gd"=="sd")
+        {
+            window.location.href = "http://www.sdsszt.com/zqInteract.html";
+        }
+
+    }
+    function goInfo() {
+        window.open("http://gd.gsxt.gov.cn/aiccips//announcement/abnormalList.html?reuestType=abnormal");
+    }
+    function goIndex() {
+        window.location.href = "http://gd.gsxt.gov.cn/aiccips/";
+    }
+    function goReadMe() {
+        window.open("http://gd.gsxt.gov.cn/aiccips//readMe.html");
+    }
+</script>
+<div style=" height: 52px;width: 1350px;background-image: url('http://gd.gsxt.gov.cn/aiccips/image/u1.png')">
+
+    <div class="clickStyle" style="display: inline-block;width: 75px;height: 30px;margin:10px 0 0 205px;"
+         onclick="goIndex()"></div>
+
+
+    <div class="clickStyle" style="display:inline-block;width: 133px;height: 30px;margin:10px 0 0 80px;"
+         onclick="goAnnual()"></div>
+
+
+    <div class="clickStyle" style="display:inline-block;width: 100px;height: 30px;margin:10px 0 0 85px;"
+         onclick="goInfo()"></div>
+
+
+    <div class="clickStyle" style="display:inline-block;width: 105px;height: 30px;margin:10px 0 0 65px;"
+         onclick="goReadMe()"></div>
+    <span id="dh" class="clickStyle"
+          style="position: relative;display:inline-block;width: 40px;float:right;margin: 13px 150px 0 0;height:30px;line-height: 30px ;font-size: 13px;border: none">
+        <div id="dfdh"
+             style="position:absolute;padding-top: 10px;width: 385px;height: 253px;right:  5px;top: 40px;border: 1px solid #AB812D;background-color: #FFFFFF;display: none;font-size: 16px;">
+                <ul class="dh1">
+                    <li><a href="http://www.gsxt.gov.cn" >国家企业信用信息公示系统</a></li>
+                    <li>华北 <span>|</span> <a href="http://bj.gsxt.gov.cn">北京</a> <a href="http://tj.gsxt.gov.cn" >天津</a> <a href="http://he.gsxt.gov.cn">河北</a> <a href="http://sx.gsxt.gov.cn">山西</a> <a href="http://nm.gsxt.gov.cn" >内蒙古</a></li>
+                    <li>东北 <span>|</span> <a href="http://ln.gsxt.gov.cn">辽宁</a> <a href="http://jl.gsxt.gov.cn">吉林</a> <a href="http://hl.gsxt.gov.cn">黑龙江</a></li>
+                    <li>华东 <span>|</span> <a href="https://sh.gsxt.gov.cn">上海</a> <a href="http://js.gsxt.gov.cn" >江苏</a> <a href="http://zj.gsxt.gov.cn">浙江</a> <a href="http://ah.gsxt.gov.cn" >安徽</a> <a href="http://fj.gsxt.gov.cn">福建</a> <a href="http://jx.gsxt.gov.cn">江西</a> <a href="http://sd.gsxt.gov.cn" >山东</a></li>
+                    <li>华南 <span>|</span> <a href="http://gd.gsxt.gov.cn">广东</a> <a href="http://gx.gsxt.gov.cn">广西</a> <a href="http://hi.gsxt.gov.cn">海南</a></li>
+                    <li>华中 <span>|</span> <a href="http://ha.gsxt.gov.cn">河南</a> <a href="http://hb.gsxt.gov.cn">湖北</a> <a href="http://hn.gsxt.gov.cn">湖南</a></li>
+                    <li>西南 <span>|</span> <a href="http://cq.gsxt.gov.cn">重庆</a> <a href="http://sc.gsxt.gov.cn">四川</a> <a href="http://gz.gsxt.gov.cn">贵州</a> <a href="http://yn.gsxt.gov.cn">云南</a> <a href="http://xz.gsxt.gov.cn">西藏</a></li>
+                    <li>西北 <span>|</span> <a href="http://sn.gsxt.gov.cn">陕西</a> <a href="http://gs.gsxt.gov.cn" >甘肃</a> <a href="http://qh.gsxt.gov.cn">青海</a> <a href="http://nx.gsxt.gov.cn">宁夏</a> <a href="http://xj.gsxt.gov.cn">新疆</a></li>
+                </ul>
+        </div>
+    </span>
+</div>
+
+
+<div style="display: none">
+<script type="text/javascript" src="http://gd.gsxt.gov.cn/aiccips/js/cnzz.js"></script>
+    <script src="http://static.geetest.com/static/tools/gt.js"></script>
+</div>
+<div id="popup-captcha"></div>
+<script>
+    var noSel = new Array("广东","广州","深圳","内蒙古","吉林","长春","辽宁","海南","广东省","吉林省","长春市","辽宁省","海南省","广州市","深圳市","公司","企业","有限公司","有限责任公司");
+    $(document).ready(function () {
+        $("#colseTip").click(function(){
+            $("#nullTip").dialog('close');
+        });
+       /* $("#see").click(function(){
+            $("#vimg").attr("src", "http://gd.gsxt.gov.cn/aiccips//verify.html?random=" + Math.random());
+        });
+        //为验证码图片绑定鼠标放在上面的事件与点击事件
+        $("#vimg").mouseover(function(){
+            $(this).css("cursor", "pointer");
+        }).click(function(){
+            // 主动触发看不清楚的点击事件
+            $("#see").trigger("click");
+        });*/
+        /*$("#mysearch").click(function () {
+                    var textfield = $("#content");
+                    var zmdid = $("#zmdid");
+                    var alert_win = $("#alert_win");
+                    var code = $("#code");
+                    if($.trim(textfield.val()) == ""){
+                        alert("请输入企业名称或注册号！");
+                        textfield.val("");
+                        textfield.focus();
+                        return;
+                    }else{
+                        $("#see").trigger("click");
+                        code.val("");
+                        alert_win.attr("style","display:black;");
+                        zmdid.attr("style","display:black;");
+                    }
+                }
+        );*/
+        $("#checkBtn").click(function(){
+            //单击搜一下按钮时表单较验
+            var msg = "";
+            //document.checkForm.submit();
+            //$("#textfield").submit();
+            var textfield = $("#content");
+            $("#textfield").val(textfield.val());
+            var code = $("#code");
+            //判断输入框是否为空
+            if ($.trim(code.val()) == "请输入验证码"){
+                msg = "请输入验证码！";
+                code.focus();
+            }
+            for(var i=0;i<noSel.length;i++){
+                if($.trim(textfield.val())==noSel[i]){
+                    msg = "请勿使用此类词语进行查询！";
+                    textfield.focus();
+                    break;
+                }
+            }
+            if(msg != ""){
+                alert(msg);
+                return;
+            }else {
+                //异步请求
+                showLoading();
+                var url = "";
+
+                //var newwindow=window.open('about:blank');
+                $.post("http://gd.gsxt.gov.cn/aiccips/CheckEntContext/checkCode.html", $("#checkForm").serialize(), function (data, status) {
+                    if (status == "success") {
+                        _czc.push(["_trackEvent", "公示系统", "搜索"]);
+                        if (data.flag == "1") {
+                            if ($.trim(textfield.val()) != "") {
+                                var code = $("#code").val();
+                                var text = data.textfield;
+                                if(loadStatus){
+                                    searchKeywordCollect_gsxt($("#textfield").val());
+                                }
+                                $("#textfield").val(text);
+
+                                url = "http://gd.gsxt.gov.cn/aiccips/CheckEntContext/showCheck.html";
+
+
+                                if ($(".tabchoose").first().text().indexOf("经营异常名录") >= 0) {
+                                    $("#type").val("abnormal");
+                                } else if ($(".tabchoose").first().text().indexOf("严重违法失信企业名单") >= 0) {
+                                    $("#type").val("Dishonesty");
+                                } else {
+                                    $("#type").val("nomal");
+                                }
+                                ;
+                                //window.location.reload();
+                                $("#checkForm").serialize();
+                                $('#checkForm').attr('action', url);
+                                $("#checkForm").submit();
+                            }
+                        }
+                        if (data.flag == "3") {
+                            alert(data.tip);
+                            //newwindow.close();
+                            window.location.reload();
+                        }
+                        if (data.flag == "0") {
+                            hidenLoading();
+                            //newwindow.close();
+                            alert(data.tip);
+                            // 主动触发换一张的点击事件
+                            $("#see").trigger("click");
+                            code.focus();
+                        }
+                    } else {
+                        hidenLoading();
+                        alert("数据加载出错！")
+                    }
+                }, "json");
+            }});
+        /*$("#closeWin").click(function(){
+            var zmdid = $("#zmdid");
+            var alert_win = $("#alert_win");
+            zmdid.attr("style","display:none;");
+            alert_win.attr("style","display:none;");
+
+        });*/
+        $("#content").bind("focus",function(){
+           if($(this).val()=="请输入企业名称、统一社会信用代码或注册号"){
+               $(this).val("")
+           }
+        })
+        $("#content").bind("blur",function(){
+            if($(this).val()==""){
+                $(this).val("请输入企业名称、统一社会信用代码或注册号")
+            }
+        })
+        var handlerPopup = function (captchaObj) {
+            // 成功的回调
+            captchaObj.onSuccess(function () {
+                var validate = captchaObj.getValidate();
+                $.ajax({
+                    url: "http://gd.gsxt.gov.cn/aiccips/verify/sec.html", // 进行二次验证
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                        textfield: $('#content').val(),
+                        geetest_challenge: validate.geetest_challenge,
+                        geetest_validate: validate.geetest_validate,
+                        geetest_seccode: validate.geetest_seccode
+                    },
+                    success: function (data) {
+
+                        if (data && (data.status === "success")) {
+                            //window.location.reload();
+                            if($("#verifyType").val()=="print"){
+                                window.open("http://gd.gsxt.gov.cn/aiccips/print/printView.html?entNo="+$("#entNo").val()+"&regOrg="+$("#regOrg").val())
+                            }
+                            if($("#verifyType").val()=="email"){
+                                $("#maildialog").dialog({
+                                    resizable: false,
+                                    height:235,
+                                    width:365,
+                                    modal: true,
+                                    closeOnEscape: false,
+                                    title: "发送报告",
+                                    open: function (event, ui) {
+                                        $(".ui-dialog-titlebar-close", $(this).parent()).hide();
+                                        $("#maildialog").siblings(".ui-widget-header").css("background-color","#D5B661");
+                                        $("#maildialog").siblings(".ui-widget-header").css("color","#FFFFFF");
+                                    }
+                                });
+                                return;
+                            }
+                            if($("#verifyType").val()=="search"){
+                                var localSettingSub = '';
+                                if(localSettingSub=="gz"){
+                                    window.location.href="http://gsxt.gdgs.gov.cn/aiccips?textFiled="+$("#content").val();
+                                    return;
+                                }
+                                var text = data.textfield;
+                                $("#textfield").val(text);
+                                var url = "http://gd.gsxt.gov.cn/aiccips/CheckEntContext/showCheck.html";
+                                if ($(".tabchoose").first().text().indexOf("经营异常名录") >= 0) {
+                                    $("#type").val("abnormal");
+                                } else if ($(".tabchoose").first().text().indexOf("严重违法失信企业名单") >= 0) {
+                                    $("#type").val("Dishonesty");
+                                } else {
+                                    $("#type").val("nomal");
+                                }
+                                $("#checkForm").serialize();
+                                $('#checkForm').attr('action', url);
+                                $("#checkForm").submit();
+                            }
+
+
+                        } else {
+                            alert("失败")
+                            hidenLoading();
+                        }
+                    }
+                });
+            });
+            $("#mysearch").click(function () {
+                $("#verifyType").val("search");
+                var textfield = $("#content");
+                if($.trim(textfield.val()) == ""||textfield.val()=="请输入企业名称、统一社会信用代码或注册号"){
+                    $("#nullTip").dialog({
+                        resizable: false,
+                        height:200,
+                        width:330,
+                        modal: true,
+                        closeOnEscape: true,
+                        title: "提示框",
+                        open: function (event, ui) {
+                            $("#nullTip").siblings(".ui-widget-header").css("padding-left","10px");
+                            $("#nullTip").siblings(".ui-widget-header").css("background-color","#D5B661");
+                            $("#nullTip").siblings(".ui-widget-header").css("color","#FFFFFF");
+                        }
+                    })
+                    return;
+                }
+                for (var i = 0; i < noSel.length; i++) {
+                    if ($.trim(textfield.val()) == noSel[i]) {
+                        msg = "请勿使用此类词语进行查询！";
+                        alert(msg);
+                        textfield.focus();
+                        return;
+                    }
+                }
+
+                captchaObj.show();
+            });
+            if($("#emailBtn").length>0){
+                $("#emailBtn").click(function(){
+                    hidenLoading();
+                    $("#verifyType").val("email");
+                    captchaObj.show();
+
+                })
+            }
+            if($("#printBtn").length>0){
+                $("#printBtn").click(function(){
+                    hidenLoading();
+                    $("#verifyType").val("print");
+                    captchaObj.show();
+
+                })
+            }
+
+            // 将验证码加到id为captcha的元素里
+            captchaObj.appendTo("#popup-captcha");
+
+        };
+        $.ajax({
+            url: "http://gd.gsxt.gov.cn/aiccips//verify/start.html?t=" + (new Date()).getTime(), // 加随机数防止缓存
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                // 使用initGeetest接口
+                // 参数1：配置参数
+                // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+                initGeetest({
+                    gt: data.gt,
+                    challenge: data.challenge,
+                    product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+                    offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                    // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+                }, handlerPopup);
+            }
+        });
+    })
+</script>
+<form id="topForm" action="" method="post">
+    <input type="hidden" id="aiccipsUrl" value="http://gd.gsxt.gov.cn/aiccips/">
+    <input type="hidden" id="entNo" name="entNo" value="">
+    <input type="hidden" id="entType" name="entType" value="">
+    <input type="hidden" id="regOrg" name="regOrg" value="">
+</form>
+<div style=" height: 95px;background-color: #FFFFFF;width: 1350px;">
+    <div class="logo_gd
+" style="margin-top: 15px;">
+    </div>
+    <div style="float: right; width: 400px;padding-right: 160px;">
+
+    <ul class="chooseItem">
+        <li style="padding: 0px;"><img src="http://gd.gsxt.gov.cn/aiccips//image/glass.png" width="14px" height="14px" style="vertical-align: middle" /></li>
+        <li class="clickStyle tabchoose ">企业信用信息&nbsp;&nbsp;</li>
+        <li><span></span></li>
+        <li class="clickStyle tab ">&nbsp;&nbsp;经营异常名录&nbsp;&nbsp;</li>
+        <li> <span></span></li>
+        <li class="clickStyle tab ">&nbsp;&nbsp;严重违法失信企业名单</li>
+    </ul>
+    <div style="float: left;height: 37px;width: 400px;background-image:
+            url('http://gd.gsxt.gov.cn/aiccips/image/search.png');background-repeat: no-repeat;margin-top: 10px;">
+        <div style="display: inline-block;float: left;padding-top:3px;padding-left:2px">
+            <input id="content" style="border: 0px;width:355px;height:28px;line-height: 28px;font-size: 12px;color: #999999;"
+                   value="440003000044746">
+        </div>
+        <div id="mysearch" class="clickStyle" style="float: left;width: 40px;height: 37px;"></div>
+    </div>
+</div>
+</div>
+
+<form id="checkForm" method="post">
+    <input id="textfield" name="textfield" type="hidden"/>
+    <input id="type" name="type" type="hidden"/>
+
+
+</form>
+<input type="hidden" id="verifyType">
+<div id="nullTip"  style="padding: 0;display: none;text-align: center">
+    <p style="margin-top: 40px;font-size: 12px;text-align: center;margin-bottom: 12px;">
+        请输入企业名称、统一社会信用代码或注册号！
+    </p>
+    <p style=" padding-top: 35px;text-align: center">
+        <span id="colseTip" class="clickStyle"  style=" padding: 4px;background-color: #D5B661;color: white;font-size: 13px;">
+            确&nbsp;定
+        </span>
+    </p>
+</div>    <div class="mianBodyStyle" style="min-height: 452px;height: auto">
+        <div style="margin-left: 160px;margin-top: 16px;padding-top: 10px" class="textStyle">
+                用时14.851秒，查询到<span style="color: red">1</span>条信息
+        </div>
+        <div style="height:25px;margin-left: 155px;background: url('http://gd.gsxt.gov.cn/aiccips/image/u49.png') no-repeat;padding-bottom: 15px;"></div>
+                <div class="clickStyle" style="margin-left: 160px;padding-left: 10px;" onclick="details(this)" >
+                    <div style="display: none">
+                       <a href="../GSpublicity/GSpublicityList.html?service=entInfo_ROYjDmPQ4dpPy0eFYwDpZDwszQirEvjRrPXUzVTu4VsaxbRP4S73JXqCQJVBFZtz-A4QQZ+x+p5w5+akWCcoRYQ==" target=_blank  class='font16'>广州市安鑫消防工程有限公司珠海横琴分公司</a> 
+                    </div>
+                    <span><span class="rsfont">
+                                广州市安鑫消防工程有限公司珠海横琴分公司
+                        </span>
+                            <span class="blue1bg">
+                            存续
+                        </span>
+                        <span style="font-family: '微软雅黑 Regular', '微软雅黑';font-weight: 400;font-style: normal;font-size: 14px;color: #EB5857;">
+                        </span>
+                    </span>
+                    <br>
+                    <div style="margin: 0">
+                        <table class="textStyle">
+                            <tr>
+                                <td style="width: 35%">
+                                    <span class="listLableImg" style="background: url('http://gd.gsxt.gov.cn/aiccips/image/info.png') no-repeat;"></span>
+                                    <span>统一社会信用代码/注册号：</span>
+                                    <span class="dataTextStyle">
+                                                440003000044746
+                                    </span>
+                                </td>
+                                <td style="width: 25%">
+                                    <span class="listLableImg" style="background: url('http://gd.gsxt.gov.cn/aiccips/image/people.png') no-repeat;"></span>
+                                    <span>
+                                                 负责人：
+                                       </span>
+                                    <span class="dataTextStyle">李汉深</span>
+                                </td>
+                                <td style="width: 30%">
+                                    <span class="listLableImg" style="background: url('http://gd.gsxt.gov.cn/aiccips/image/tip.png') no-repeat;"></span>
+                                    <span>成立日期：</span>
+                                    <span class="dataTextStyle">2014年08月18日</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="margin-left: -1px;;height:23px;background: url('http://gd.gsxt.gov.cn/aiccips/image/u51.png') no-repeat ;"></div>
+                </div>
+        <div style="text-align: center;bottom: 0px;margin: 0 auto;">
+            <span class="pagination" id="myPagination" >
+            </span>
+        </div>
+    </div>
+<div style="bottom: 0px;width: 100%;padding-top: 10px;padding-bottom: 10px;font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #8F8F8F;
+    border-top:1px solid #D5D5D5;">
+            <p style="text-align: center;margin: 0">
+            主办单位：广东省工商行政管理局&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+        <p style="text-align: center;margin: 0;text-indent:3em;">
+            地址：广州市天河区体育西路57号&nbsp;&nbsp;&nbsp;&nbsp;邮政编码：510620&nbsp;&nbsp;&nbsp;&nbsp;建议使用IE8及以上版本浏览器
+        </p >
+        <p style="text-align: center;margin: 0;">
+            <a href="http://gd.gsxt.gov.cn/aiccips//main/consult.html" target="_blank"  style="color: red;"><u style="text-decoration: blink;">业务咨询与技术支持联系方式</u></a></p>
+</div>
+</div>
+<form id="mycheckForm" method="post">
+    <input id="textfield" name="textfield" type="hidden" value="LzK7rfxlA92Iqhv/DfiTSA=="/>
+    <input id="type" name="type" type="hidden" value="nomal"/>
+    <input id="total" name="total" type="hidden" value="1">
+    <input id="pageNo" name="pageNo" type="hidden">
+</form>
+<script>
+    var loadStatus = false;
+    var local = 'gd';
+    var url="";
+    if(local=="gd"){
+        url ="http://fwtj.gsxt.gov.cn/js/logcollector.js?nodenum=440000"
+        //url = "http://gd.gsxt.gov.cn/aiccips//js/logcollector_gd.js?nodenum=440000";
+    }else if (local=="nm"){
+        url ="http://fwtj.gsxt.gov.cn/js/logcollector.js?nodenum=150000"
+    }
+    var _doc = document.getElementsByTagName('head')[0];
+    if(_doc){
+        var js = document.createElement('script');
+        js.setAttribute('type', 'text/javascript');
+        js.setAttribute('src', url);
+        _doc.appendChild(js);
+        if (js.onreadystatechange) { //if not IE
+            js.onreadystatechange = function () {
+                if (js.readyState == 'loaded' || js.readyState == 'complete') {
+                    loadStatus = true;
+                    console.log(" ie load success")
+                }
+            }
+        }else{
+            js.onload = function () {
+                loadStatus = true;
+            }
+        }
+    }
+    window.onload = function() {
+        var url = window.location.href;
+        sessionId_gsxt = '';
+        if(loadStatus==true){
+            t1Collect_gsxt();
+            if(url.indexOf("service=entInfo")>-1){
+                t2Collect_gsxt('');
+            }
+        }
+
+    }
+
+</script>
+<div style="display: none">
+    <script type="text/javascript">
+        var _czc = _czc || [];
+        //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+        _czc.push(["_setAccount", "1261228732"]);
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261228732'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261228732' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>
+2017/08/28 01:42:41 WARN: 搜索440003000044746出错 - Get http://gd.gsxt.gov.cn/aiccips/GSpublicity/GSpublicityList.html?service=entInfo_ROYjDmPQ4dpPy0eFYwDpZDwszQirEvjRrPXUzVTu4VsaxbRP4S73JXqCQJVBFZtz-A4QQZ+x+p5w5+akWCcoRYQ==: EOF
+2017/08/28 01:43:01 WARN: 搜索440003000044746出错 - Get http://gd.gsxt.gov.cn/aiccips/GSpublicity/GSpublicityList.html?service=entInfo_ROYjDmPQ4dpPy0eFYwDpZDwszQirEvjRrPXUzVTu4VsaxbRP4S73JXqCQJVBFZtz-A4QQZ+x+p5w5+akWCcoRYQ==: EOF
+2017/08/28 01:43:22 WARN: 搜索440003000044746出错 - Get http://gd.gsxt.gov.cn/aiccips/GSpublicity/GSpublicityList.html?service=entInfo_ROYjDmPQ4dpPy0eFYwDpZDwszQirEvjRrPXUzVTu4VsaxbRP4S73JXqCQJVBFZtz-A4QQZ+x+p5w5+akWCcoRYQ==: EOF
+2017/08/28 01:43:22 WARN: 搜索440003000044746:0失败 - Get http://gd.gsxt.gov.cn/aiccips/GSpublicity/GSpublicityList.html?service=entInfo_ROYjDmPQ4dpPy0eFYwDpZDwszQirEvjRrPXUzVTu4VsaxbRP4S73JXqCQJVBFZtz-A4QQZ+x+p5w5+akWCcoRYQ==: EOF
+2017/08/28 01:43:24 INFO: 开始搜索0 - 440003000044754
+2017/08/28 01:43:39 WARN: 搜索440003000041789:0失败 - Get http://gd.gsxt.gov.cn/aiccips/verify/start.html?t=1503884499896: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+2017/08/28 01:43:39 WARN: 搜索440003000044711:0失败 - Get http://gd.gsxt.gov.cn/aiccips/verify/start.html?t=1503884499896: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+2017/08/28 01:43:41 INFO: 开始搜索0 - 440003000044762
+2017/08/28 01:43:41 INFO: 开始搜索0 - 440003000041828
+2017/08/28 01:43:44 WARN: 搜索440003000044754:0失败 - Post http://gd.gsxt.gov.cn/aiccips/CheckEntContext/showCheck.html: EOF
+2017/08/28 01:43:46 INFO: 开始搜索0 - 440003000044779

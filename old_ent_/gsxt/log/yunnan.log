@@ -1,0 +1,59 @@
+nohup: ignoring input
+2017/09/26 07:57:57 INFO: 监听地址:8240成功
+2017/09/26 07:57:57 INFO: 开始搜索区划码 - 530000
+2017/09/26 07:58:00 INFO: 客户端[::1]:41704已经连接, 当前客户端数量为1
+2017/09/26 07:58:00 INFO: 客户端[::1]:41704分发任务yunnan-530000000000009
+2017/09/26 07:58:00 INFO: 客户端[::1]:41704分发任务yunnan-530000000000017
+2017/09/26 07:58:23 INFO: 客户端[::1]:41704响应yunnan-530000000000017-FAIL-0
+2017/09/26 07:58:23 INFO: 客户端[::1]:41704响应yunnan-530000000000009-FAIL-0
+2017/09/26 07:58:23 INFO: 客户端[::1]:41704分发任务yunnan-530000000000025
+2017/09/26 07:58:23 INFO: 客户端[::1]:41704分发任务yunnan-530000000000033
+2017/09/26 07:58:46 INFO: 客户端[::1]:41704响应yunnan-530000000000033-FAIL-0
+2017/09/26 07:58:46 INFO: 客户端[::1]:41704响应yunnan-530000000000025-FAIL-0
+2017/09/26 07:58:46 INFO: 客户端[::1]:41704分发任务yunnan-530000000000041
+2017/09/26 07:58:46 INFO: 客户端[::1]:41704分发任务yunnan-530000000000050
+2017/09/26 07:59:10 INFO: 客户端[::1]:41704响应yunnan-530000000000050-FAIL-0
+2017/09/26 07:59:10 INFO: 客户端[::1]:41704响应yunnan-530000000000041-FAIL-0
+2017/09/26 07:59:10 INFO: 客户端[::1]:41704分发任务yunnan-530000000000068
+2017/09/26 07:59:10 INFO: 客户端[::1]:41704分发任务yunnan-530000000000076
+2017/09/26 07:59:33 INFO: 客户端[::1]:41704响应yunnan-530000000000068-FAIL-0
+2017/09/26 07:59:33 INFO: 客户端[::1]:41704响应yunnan-530000000000076-FAIL-0
+2017/09/26 07:59:33 INFO: 客户端[::1]:41704分发任务yunnan-530000000000084
+2017/09/26 07:59:33 INFO: 客户端[::1]:41704分发任务yunnan-530000000000092
+2017/09/26 07:59:56 INFO: 客户端[::1]:41704响应yunnan-530000000000084-FAIL-0
+2017/09/26 07:59:56 INFO: 客户端[::1]:41704响应yunnan-530000000000092-FAIL-0
+2017/09/26 07:59:56 INFO: 客户端[::1]:41704分发任务yunnan-530000000000105
+2017/09/26 07:59:56 INFO: 客户端[::1]:41704分发任务yunnan-530000000000113
+2017/09/26 08:00:19 INFO: 客户端[::1]:41704响应yunnan-530000000000105-FAIL-0
+2017/09/26 08:00:19 INFO: 客户端[::1]:41704响应yunnan-530000000000113-FAIL-0
+2017/09/26 08:00:19 INFO: 客户端[::1]:41704分发任务yunnan-530000000000121
+2017/09/26 08:00:19 INFO: 客户端[::1]:41704分发任务yunnan-530000000000130
+�530000000000041:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 07:59:07 WARN: 搜索530000000000050:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 07:59:10 INFO: 开始搜索0 - 530000000000076
+qg.Host + path: http://www.gsxt.gov.cn/SearchItemCaptcha
+2017/09/26 07:59:10 INFO: 开始搜索0 - 530000000000068
+qg.Host + path: http://www.gsxt.gov.cn/SearchItemCaptcha
+2017/09/26 07:59:31 WARN: 搜索530000000000076:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 07:59:31 WARN: 搜索530000000000068:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 07:59:33 INFO: 开始搜索0 - 530000000000092
+qg.Host + path: http://www.gsxt.gov.cn/SearchItemCaptcha
+2017/09/26 07:59:33 INFO: 开始搜索0 - 530000000000084
+qg.Host + path: http://www.gsxt.gov.cn/SearchItemCaptcha
+2017/09/26 07:59:54 WARN: 搜索530000000000092:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 07:59:54 WARN: 搜索530000000000084:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 07:59:56 INFO: 开始搜索0 - 530000000000113
+qg.Host + path: http://www.gsxt.gov.cn/SearchItemCaptcha
+2017/09/26 07:59:56 INFO: 开始搜索0 - 530000000000105
+qg.Host + path: http://www.gsxt.gov.cn/SearchItemCaptcha
+2017/09/26 08:00:17 WARN: 搜索530000000000113:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 08:00:17 WARN: 搜索530000000000105:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 08:00:19 INFO: 开始搜索0 - 530000000000130
+qg.Host + path: http://www.gsxt.gov.cn/SearchItemCaptcha
+2017/09/26 08:00:19 INFO: 开始搜索0 - 530000000000121
+qg.Host + path: http://www.gsxt.gov.cn/SearchItemCaptcha
+2017/09/26 08:00:37 ERROR: 接收消息失败 - EOF
+2017/09/26 08:00:37 ERROR: 连接服务端localhost:8240失败，10s后重连 - dial tcp [::1]:8240: getsockopt: connection refused
+2017/09/26 08:00:40 WARN: 搜索530000000000130:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 08:00:40 WARN: 搜索530000000000121:0失败 - Get http://www.gsxt.gov.cn/SearchItemCaptcha: proxyconnect tcp: dial tcp 60.184.206.173:28049: getsockopt: connection refused
+2017/09/26 08:00:47 ERROR: 连接服务端localhost:8240失败，10s后重连 - dial tcp [::1]:8240: getsockopt: connection refused
